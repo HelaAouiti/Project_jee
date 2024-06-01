@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          type="text/css"
+          href="../static/css/bootstrap.min.css"
+          th:href="@{/css/bootstrap.min.css}"/>
+    <meta charset="UTF-8">
+    <title>Demande Congé</title>
+    <style>
+        /* Optional: Custom styles */
+        body {
+            background-color: #f8f9fa; /* Light gray background */
+            padding-top: 50px; /* Add some space from top */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form method="post" action="/employe/createConge">
+                    <div class="form-group">
+                        <label>Description:</label>
+                        <input type="text" class="form-control" name="description" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Date de début:</label>
+                        <input type="date" class="form-control" name="dateDebut" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Date de fin:</label>
+                        <input type="date" class="form-control" name="dateFin" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
